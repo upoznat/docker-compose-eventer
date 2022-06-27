@@ -1,0 +1,17 @@
+version: "3.2"
+services:
+  oracle-db:
+    image: gvenzl/oracle-xe
+    container_name: 'oracle-db'
+    ports:
+        - 1521:1521
+    networks:
+        - oracle_net
+    restart: 
+        - always
+    environment:
+        - ORACLE_PASSWORD=<your-password>
+
+networks:
+  oracle_net:
+    driver: bridge
