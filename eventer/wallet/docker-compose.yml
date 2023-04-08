@@ -1,0 +1,13 @@
+version: "3.2"
+services:
+  wallet:
+    image: wallet
+    container_name: 'wallet'
+    ports:
+        - 8081:8081
+    volumes:
+        - ~/.docker-conf/wallet/data/:/home/upoznat/wallet/lib
+        - ~/.docker-conf/wallet/log/:/home/upoznat/wallet/log
+    network_mode: eventer-net
+
+

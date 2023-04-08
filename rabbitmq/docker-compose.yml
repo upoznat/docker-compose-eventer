@@ -6,12 +6,17 @@ services:
     ports:
         - 5672:5672
         - 15672:15672
+        - 15691:15692
+        - 9419:9419
     volumes:
         - ~/.docker-conf/rabbitmq/data/:/home/upoznat/rabbitmq/lib
         - ~/.docker-conf/rabbitmq/log/:/home/upoznat/rabbitmq/log
-    networks:
-        - rabbitmq_net
 
 networks:
-  rabbitmq_net:
-    driver: bridge
+ default:
+   external: 
+     name: ${NETWORK}
+    
+
+
+

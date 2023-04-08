@@ -1,0 +1,19 @@
+version: "3.2"
+services:
+  event-ticket:
+    image: event-ticket
+    container_name: 'event-ticket'
+    ports:
+        - 8085:8085
+    volumes:
+        - ~/.docker-conf/event-ticket/data/:/home/upoznat/event-ticket/lib
+        - ~/.docker-conf/event-ticket/log/:/home/upoznat/event-ticket/log
+    network_mode: ${NETWORK}
+        
+#networks:
+# default:
+#   external: 
+#     name: ${NETWORK}
+
+
+

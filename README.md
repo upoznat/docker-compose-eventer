@@ -62,3 +62,16 @@ Kreiranje novog usera:
 --ALTER SESSION SET CONTAINER=XEPDB1;
 CREATE USER TEST IDENTIFIED BY test QUOTA UNLIMITED ON USERS;
 GRANT CONNECT, RESOURCE TO TEST;
+
+
+
+
+
+
+
+
+Korisno:
+Postoji online tool koji pretvara docker run komande u docker-compose fajlove, 
+pa moze da posluzi nekome ko nije siguran u ispravnost svojih napisanih komandi. 
+Tool je na sledecem linku:
+https://www.composerize.com/
